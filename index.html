@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Generador de degradados para CSS en tiempo real. Hecho con VUeJS 3"
+    />
+    <title>Degradados · MrJow</title>
+
+    <!-- PWA Information -->
+
+    <!-- Manifiesto Json -->
+    <link rel="manifest" href="./manifest.json" />
+
+    <!-- Modificar color barra de estado en Android -->
+    <meta name="theme-color" content="#2f3377" />
+    <!-- Modificar color barra de estado en iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+
+    <!-- Optimizaciones SEO -->
+    <meta name="MobileOptimized" content="width" />
+    <meta name="HandheldFriendly" content="true" />
+
+    <!-- Icons -->
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="./img/favicon.png" />
+    <link rel="apple-touch-startup-image" href="./img/favicon.png" />
+
+    <!-- Metadata PWA -->
+
+    <!-- <link rel="stylesheet" href="https://necolas.github.io/normalize.css"/> -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+
+  <body>
+    <div id="my-app" class="app">
+      <h1>{{title}}</h1>
+      <hr />
+
+      <form>
+        <label>
+          Color inicial:
+          <input type="color" v-model="fcolor" />
+          &nbsp; {{fcolor}}
+        </label>
+        <br /><br />
+        <label>
+          Color final:
+          <input type="color" v-model="scolor" />
+          &nbsp; {{scolor}}
+        </label>
+        <br /><br />
+        <label>
+          <input type="radio" value="to right" v-model="direction" />
+          To-right:
+        </label>
+        <label>
+          <input type="radio" value="to left" v-model="direction" />
+          To-left:
+        </label>
+        <br /><br />
+        <label>
+          <input type="radio" value="to bottom" v-model="direction" />
+          To-bottom:
+        </label>
+        <label>
+          <input type="radio" value="to top" v-model="direction" />
+          To-top:
+        </label>
+      </form>
+
+      <br /><br />
+
+      <div class="degraded" :style="setColor">
+        <form>
+          <label>
+            <input type="text" :value="setColor" />
+          </label>
+        </form>
+      </div>
+    </div>
+
+    <script src="./load.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/mountApp.js"></script>
+  </body>
+</html>

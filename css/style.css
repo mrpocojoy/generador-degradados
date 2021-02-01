@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+html,
+body {
+  background: #2f3377;
+  color: #efefef;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  margin: auto;
+  text-align: center;
+}
+
+#my-app form {
+  margin-top: 4rem;
+}
+
+.degraded {
+  width: 90%;
+  margin: 30px auto;
+  min-height: 30vh;
+}
+
+.degraded form {
+  margin: auto;
+  width: 100%;
+  position: relative;
+}
+
+.degraded form input {
+  width: 90%;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.5rem 0;
+}
